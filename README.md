@@ -29,17 +29,17 @@ Or install it yourself as:
     $ gem install homie
 
 ## Usage
-###About
+### About
 To implement Observer pattern and start using Homie first you should decompose logic into 2 object types:
 * `Subject` - the main part of logic, depending on the results of which the further part of logic should vary between scenarios.
 * `Observer` - those scenarios that will be executed depending on the Subject result.
 
-###Include into your `Subject` Homie module
+### Include into your `Subject` Homie module
 
 ```ruby
   include Homie
 ```
-###Subscribing
+### Subscribing
 
 Bind `Observers` to your `Subject` on particular events. As an `Observer` it could be any object with a *call* method(that is an entry point for business logic) **OR** a block of code.
 
@@ -81,7 +81,7 @@ end
 
 *Subscribing supports chaining*.
 
-###Broadcasting
+### Broadcasting
 To broadcast an event use method `broadcast(event_name, *arguments)`.
 *Broadcasting also support chaining.*
 
